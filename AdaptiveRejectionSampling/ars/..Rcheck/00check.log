@@ -1,0 +1,34 @@
+* using log directory ‘/Users/jucheng/Desktop/stat243final/ars/..Rcheck’
+* using R version 3.2.2 (2015-08-14)
+* using platform: x86_64-apple-darwin13.4.0 (64-bit)
+* using session charset: UTF-8
+* checking for file ‘./DESCRIPTION’ ... OK
+* this is package ‘ars’ version ‘0.1’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .DS_Store
+  .gitignore
+  R/.DS_Store
+  R/.Rhistory
+  tests/.DS_Store
+  ..Rcheck
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘ars’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... ERROR
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_TIME failed, using "C" 
+3: Setting LC_MESSAGES failed, using "C" 
+4: Setting LC_MONETARY failed, using "C" 
+* DONE
+Status: 1 ERROR, 1 NOTE

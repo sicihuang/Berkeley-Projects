@@ -1,0 +1,63 @@
++ R_CMD=/Library/Frameworks/R.framework/Resources/bin/Rcmd
++ export R_CMD
++ R_VERSION=3.2.2
++ export R_VERSION
++ R_OSTYPE=unix
++ export R_OSTYPE
++ test -z .:/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex:
++ TEXINPUTS=.:.:/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex::/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex:
++ export TEXINPUTS
++ test -z .:/Library/Frameworks/R.framework/Resources/share/texmf/bibtex/bib:
++ BIBINPUTS=.:.:/Library/Frameworks/R.framework/Resources/share/texmf/bibtex/bib::/Library/Frameworks/R.framework/Resources/share/texmf/bibtex/bib:
++ export BIBINPUTS
++ test -z .:/Library/Frameworks/R.framework/Resources/share/texmf/bibtex/bst:
++ BSTINPUTS=.:.:/Library/Frameworks/R.framework/Resources/share/texmf/bibtex/bst::/Library/Frameworks/R.framework/Resources/share/texmf/bibtex/bst:
++ export BSTINPUTS
++ . /Library/Frameworks/R.framework/Resources/etc/Renviron
+++ R_PLATFORM=x86_64-apple-darwin13.4.0
+++ R_PAPERSIZE_USER=a4
+++ R_PAPERSIZE=a4
+++ R_PRINTCMD=lpr
+++ R_RD4PDF=times,inconsolata,hyper
+++ R_TEXI2DVICMD=/usr/local/bin/texi2dvi
+++ R_GZIPCMD=/usr/bin/gzip
+++ R_UNZIPCMD=/usr/bin/unzip
+++ R_ZIPCMD=/usr/bin/zip
+++ R_BZIPCMD=/usr/bin/bzip2
+++ R_BROWSER=/usr/bin/open
+++ EDITOR=vi
+++ PAGER=/usr/bin/less
+++ R_PDFVIEWER=/usr/bin/open
+++ LN_S='ln -s'
+++ MAKE=make
+++ SED=/usr/bin/sed
+++ TAR=/usr/bin/tar
+++ R_SYSTEM_ABI='osx,gcc,gxx,gfortran,?'
+++ R_LIBS_USER='~/Library/R/3.2/library'
+++ R_QPDF=/Library/Frameworks/R.framework/Resources/bin/qpdf
+++ sed 's/^ *#.*//; s/^\(.*\)=.*/\1/' /Library/Frameworks/R.framework/Resources/etc/Renviron
++ export R_PLATFORM R_PAPERSIZE_USER R_PAPERSIZE R_PRINTCMD R_RD4PDF R_TEXI2DVICMD R_GZIPCMD R_UNZIPCMD R_ZIPCMD R_BZIPCMD R_BROWSER EDITOR PAGER R_PDFVIEWER LN_S MAKE SED TAR R_SYSTEM_ABI R_LIBS_USER R_QPDF
++ extra=
++ case "${1}" in
++ test -x /Library/Frameworks/R.framework/Resources/bin/INSTALL
++ cmd=/Library/Frameworks/R.framework/Resources/bin/INSTALL
++ shift
++ exec /Library/Frameworks/R.framework/Resources/bin/INSTALL -l /Users/jucheng/Desktop/stat243final/ars/..Rcheck --no-html --no-multiarch /Users/jucheng/Desktop/stat243final/ars
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_TIME failed, using "C" 
+3: Setting LC_MESSAGES failed, using "C" 
+4: Setting LC_MONETARY failed, using "C" 
+* installing *source* package 'ars' ...
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_TIME failed, using "C" 
+3: Setting LC_MESSAGES failed, using "C" 
+4: Setting LC_MONETARY failed, using "C" 
+* DONE (ars)

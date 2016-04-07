@@ -1,0 +1,16 @@
+abscissaeSummary        abscissaeSummary
+ars                     A function that returns samples from
+                        unnormalized density based on reject sampling
+computeZ                computeZ
+findInitAbsc            A function that returns a matrix with the three
+                        columns being the abscissae x1,...,xk and their
+                        corresponding h(x)'s and h'(x)'s respectively.
+findMode                A function that returns the mode of a function
+lowerHull               A function that, given a vector x, returns the
+                        corresponding values of the upper hull function
+sampleUpper             sampleUpper
+upperCDF                upperCDF
+upperCDFInverse         upperCDFInverse
+upperHull               A function that, given a vector x, returns the
+                        corresponding function values from the upper
+                        hull

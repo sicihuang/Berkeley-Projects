@@ -1,0 +1,196 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> library(ars)
+Loading required package: numDeriv
+Loading required package: dplyr
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+> 
+> test_check("ars")
+[1] "Test: h function, upperhull, and lowerhull have the same value at support points"
+[1] "normal distribution"
+[1] "chi square distribution"
+As expected: val_equal(seq(-5, 5, length.out = 10), function(x) {
+    return(log(dchisq(x, df = 2)))
+}) is true 
+As expected: val_equal(seq(1, 30, length.out = 15), function(x) {
+    return(log(dchisq(x, df = 2)))
+}) is true 
+[1] "exponential distribution"
+As expected: val_equal(seq(-5, 5, length.out = 10), function(x) {
+    return(log(dexp(x)))
+}) is true 
+As expected: val_equal(seq(1, 30, length.out = 15), function(x) {
+    return(log(dexp(x)))
+}) is true 
+[1] "beta distribution"
+As expected: val_equal(seq(-5, 5, length.out = 20), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is true 
+As expected: val_equal(seq(0, 7, length.out = 20), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is true 
+As expected: val_equal(seq(0, 1, length.out = 10), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is true 
+[1] "uniform distribution"
+As expected: val_equal(seq(0.5, 0.9, length.out = 10), function(x) {
+    return(log(dunif(x, 0, 1)))
+}) is true 
+[1] "piecewise-constant distribution"
+As expected: val_equal(seq(-3, 3, length.out = 15), function(x) {
+    a = sapply(x, function(x) {
+        if (x < 1) 
+            return(x)
+        else if (x >= 1 & x <= 2) 
+            return(1)
+        else if (x > 2) 
+            return(-x + 3)
+    })
+    return(a)
+}) is true 
+[1] "Test: upper hull always lie above h function"
+[1] "normal distribution"
+[1] "chi square distribution"
+As expected: val_equal(seq(-5, 5, length.out = 10), function(x) {
+    return(log(dchisq(x, df = 2)))
+}) is true 
+As expected: val_equal(seq(1, 30, length.out = 15), function(x) {
+    return(log(dchisq(x, df = 2)))
+}) is true 
+[1] "exponential distribution"
+As expected: val_equal(seq(-5, 5, length.out = 10), function(x) {
+    return(log(dexp(x)))
+}) is true 
+As expected: val_equal(seq(1, 30, length.out = 15), function(x) {
+    return(log(dexp(x)))
+}) is true 
+[1] "beta distribution"
+As expected: val_equal(seq(-5, 5, length.out = 20), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is false 
+As expected: val_equal(seq(0, 7, length.out = 20), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is false 
+As expected: val_equal(seq(0, 1, length.out = 10), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is false 
+[1] "uniform distribution"
+As expected: val_equal(seq(0.5, 0.9, length.out = 10), function(x) {
+    return(log(dunif(x, 0, 1)))
+}) is true 
+[1] "piecewise-constant distribution"
+As expected: val_equal(seq(-3, 3, length.out = 15), function(x) {
+    a = sapply(x, function(x) {
+        if (x < 1) 
+            return(x)
+        else if (x >= 1 & x <= 2) 
+            return(1)
+        else if (x > 2) 
+            return(-x + 3)
+    })
+    return(a)
+}) is true 
+[1] "Test: lower hull always lie below h function"
+[1] "normal distribution"
+[1] "chi square distribution"
+As expected: val_equal(seq(-5, 5, length.out = 10), function(x) {
+    return(log(dchisq(x, df = 2)))
+}) is true 
+As expected: val_equal(seq(1, 30, length.out = 15), function(x) {
+    return(log(dchisq(x, df = 2)))
+}) is true 
+[1] "exponential distribution"
+As expected: val_equal(seq(-5, 5, length.out = 10), function(x) {
+    return(log(dexp(x)))
+}) is true 
+As expected: val_equal(seq(1, 30, length.out = 15), function(x) {
+    return(log(dexp(x)))
+}) is true 
+[1] "beta distribution"
+As expected: val_equal(seq(-5, 5, length.out = 20), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is false 
+As expected: val_equal(seq(0, 7, length.out = 20), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is false 
+As expected: val_equal(seq(0, 1, length.out = 10), function(x) {
+    return(log(dbeta(x, 0.5, 0.5)))
+}) is false 
+[1] "uniform distribution"
+As expected: val_equal(seq(0.5, 0.9, length.out = 10), function(x) {
+    return(log(dunif(x, 0, 1)))
+}) is true 
+[1] "piecewise-constant distribution"
+As expected: val_equal(seq(-3, 3, length.out = 15), function(x) {
+    a = sapply(x, function(x) {
+        if (x < 1) 
+            return(x)
+        else if (x >= 1 & x <= 2) 
+            return(1)
+        else if (x > 2) 
+            return(-x + 3)
+    })
+    return(a)
+}) is true 
+[1] "Test sample from normal distribution"
+[1] "We evaluated g 23 times during the rejection sampling"
+As expected: shapiro$p.value > 0.05 is true 
+[1] "Test sample from truncated normal distribution"
+[1] "We evaluated g 5 times during the rejection sampling"
+As expected: max(truncate_normal_sample) < 2 is true 
+As expected: min(truncate_normal_sample) > -2 is true 
+[1] "Check the bounds for Chi-square with degree of freedom 1 (non-log-concave)"
+As expected: chisq_sample <- ars(n = 10000, g = g, left = 0) threw an error 
+As expected: chisq_sample <- ars(n = 10000, g = g) threw an error 
+[1] "Check the bounds for Chi-square with degree of freedom 2 (log-concave)"
+As expected: print(expect_true(length(ars(n = 10000, g = g, left = 0)) == 10000)) 55 warnings created 
+[1] "Check the bounds for t distribution with degree of freedom 10 (log-concave)"
+As expected: t_sample <- ars(n = 10000, g = g) threw an error 
+[1] "Check the uniform distribution"
+As expected: unif_sample <- ars(n = 10000, g = dunif, left = 0, right = 1) 1 warnings created 
+[1] "Check the uniform distribution"
+As expected: exp_sample <- ars(n = 10000, g = dexp, left = 0) 55 warnings created 
+[1] "Test the consistency of results from upperCDF and upperCDFInverse."
+As expected: testCDFandInverse(f = dnorm, inverseCdf = qnorm) equals TRUE 
+As expected: testCDFandInverse(f = f1, inverseCdf = inverseCdf1) equals TRUE 
+[1] "Test that upperCDFInverse returns numeric values"
+As expected: upperCDFInverse(y, abscissae_summary) inherits from numeric 
+As expected: upperCDFInverse(y, abscissae_summary) inherits from numeric 
+As expected: upperCDFInverse(y, abscissae_summary, xlow = 0) inherits from numeric 
+[1] "Test that upperCDFInverse returns numeric values"
+[1] "We evaluated g 54 times during the rejection sampling"
+As expected: ks.test(ars(n, dnorm), pnorm)$p.value is more than 0.05 
+[1] "We evaluated g 39 times during the rejection sampling"
+As expected: ks.test(ars(n = n, g = f1, left = 0), Cdf1)$p.value is more than 0.05 
+testthat results ================================================================
+OK: 47 SKIPPED: 0 FAILED: 0
+> 
+> proc.time()
+   user  system elapsed 
+  3.667   0.092   3.756 

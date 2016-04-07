@@ -1,0 +1,10 @@
+Package: ars
+Title: A package for stat243-final project (add details later)
+Version: 0.1
+Author: Sici Huang, Cheng Ju, Fengshi Niu, Yun Zhou (in alphabetical order). 
+Maintainer: Cheng Ju <jucheng1992@gmail.com>
+Description: Add later.
+Depends: R (>= 3.2.0), numDeriv, dplyr
+License: GPL-3
+Suggests: testthat
+Built: R 3.2.2; ; 2015-12-11 22:42:35 UTC; unix
